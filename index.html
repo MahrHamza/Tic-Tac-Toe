@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0d18">
+    <title>XO Arena | Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+
+        <header class="topbar">
+            <a class="brand" href="#" aria-label="XO Arena home">
+                <span class="brand-mark">X<span>O</span></span>
+                <span>XO<span class="brand-accent">ARENA</span></span>
+            </a>
+
+            <div class="game-label">
+                <span class="live-dot"></span>
+                TWO PLAYER MODE
+            </div>
+        </header>
+
+        <section class="intro">
+            <span class="eyebrow">THE CLASSIC GAME</span>
+            <h1>Make your <span>move.</span></h1>
+            <p>Two players. Nine squares. One winner.</p>
+        </section>
+
+        <section class="game-layout">
+
+            <div class="game-card">
+
+                <div class="match-header">
+                    <div>
+                        <span class="small-label">CURRENT MATCH</span>
+                        <h2>Game board</h2>
+                    </div>
+
+                    <span class="round-badge">
+                        ROUND <span id="round-number">01</span>
+                    </span>
+                </div>
+
+                <div class="turn-banner" id="turn-banner"
+                     aria-live="polite">
+                    <span class="turn-icon" id="turn-icon">X</span>
+                    <div class="turn-info">
+                        <span class="small-label" id="turn-caption">
+                            YOUR MOVE
+                        </span>
+                        <strong id="status">Player X's turn</strong>
+                    </div>
+                    <span class="turn-indicator">●</span>
+                </div>
+
+                <div class="board" id="board"
+                     role="group" aria-label="Tic-Tac-Toe board">
+
+                    <button class="cell" data-index="0"
+                        aria-label="Row 1, column 1"></button>
+                    <button class="cell" data-index="1"
+                        aria-label="Row 1, column 2"></button>
+                    <button class="cell" data-index="2"
+                        aria-label="Row 1, column 3"></button>
+                    <button class="cell" data-index="3"
+                        aria-label="Row 2, column 1"></button>
+                    <button class="cell" data-index="4"
+                        aria-label="Row 2, column 2"></button>
+                    <button class="cell" data-index="5"
+                        aria-label="Row 2, column 3"></button>
+                    <button class="cell" data-index="6"
+                        aria-label="Row 3, column 1"></button>
+                    <button class="cell" data-index="7"
+                        aria-label="Row 3, column 2"></button>
+                    <button class="cell" data-index="8"
+                        aria-label="Row 3, column 3"></button>
+
+                </div>
+
+                <div class="actions">
+                    <button class="btn-primary" id="restart">
+                        <span class="restart-icon">↻</span>
+                        New Game
+                    </button>
+
+                    <button class="btn-secondary" id="reset-score">
+                        Reset Score
+                    </button>
+                </div>
+
+                <p class="game-hint">
+                    <span>✦</span> Strategy starts with your next move.
+                </p>
+
+            </div>
+
+            <aside class="sidebar">
+
+                <div class="panel score-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="small-label">MATCH OVERVIEW</span>
+                            <h2>Scoreboard</h2>
+                        </div>
+                        <span class="panel-icon">♛</span>
+                    </div>
+
+                    <div class="score-row">
+                        <span class="player-token token-x">X</span>
+                        <div class="player-details">
+                            <strong>Player X</strong>
+                            <span>First player</span>
+                        </div>
+                        <strong class="score" id="score-x">0</strong>
+                    </div>
+
+                    <div class="score-row">
+                        <span class="player-token token-o">O</span>
+                        <div class="player-details">
+                            <strong>Player O</strong>
+                            <span>Second player</span>
+                        </div>
+                        <strong class="score" id="score-o">0</strong>
+                    </div>
+
+                    <div class="score-row">
+                        <span class="player-token token-draw">=</span>
+                        <div class="player-details">
+                            <strong>Draws</strong>
+                            <span>No winner</span>
+                        </div>
+                        <strong class="score" id="score-draw">0</strong>
+                    </div>
+
+                    <p class="score-note">
+                        Scores update automatically after each round.
+                    </p>
+                </div>
+
+                <div class="panel tip-panel">
+                    <span class="tip-icon">✦</span>
+                    <span class="small-label">PRO TIP</span>
+                    <h2>Think ahead.<br>Play smart.</h2>
+                    <p>
+                        Build your winning line while blocking
+                        your opponent's next move.
+                    </p>
+                    <div class="decoration" aria-hidden="true">
+                        X O X
+                    </div>
+                </div>
+
+            </aside>
+
+        </section>
+
+        <footer class="footer">
+            <span>XO ARENA <span class="footer-dot">●</span></span>
+            <span>BUILT FOR FRIENDLY COMPETITION</span>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
